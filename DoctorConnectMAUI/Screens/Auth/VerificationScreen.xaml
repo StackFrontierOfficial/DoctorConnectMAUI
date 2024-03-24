@@ -2,11 +2,105 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DoctorConnectMAUI.Screens.Auth.VerificationScreen"
-             Title="VerificationScreen">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="VerificationScreen" 
+             BackgroundImageSource="doctor_bg.jpg">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="myBackground" EndPoint="0,1">
+                <GradientStop Offset="0" Color="Transparent"/>
+                <GradientStop Offset="1" Color="Black"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid Background="{StaticResource myBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ImageButton Source="leftarrow.png"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     VerticalOptions="Start"
+                     HorizontalOptions="Start"
+               Margin="20,20,0,0"/>
+        <VerticalStackLayout Grid.Row="1" 
+                             VerticalOptions="Start"
+                             HorizontalOptions="Start">
+            <Label Text="Verification"
+                   TextColor="White"
+                   FontSize="25"
+                   Margin="20,-80,0,0"
+                   FontFamily="NotoSansBold"/>
+            <Label Text="Enter the OTP code from your phone we just sent you"
+        TextColor="White"
+                   Margin="20,10,0,0"
+                   FontSize="15"
+        FontFamily="NotoSansRegular"
+        HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal" Spacing="20" Margin="0,50,0,0" HorizontalOptions="Center">
+                <Frame BackgroundColor="{Binding bgColor}"
+                       BorderColor="Transparent"
+                       WidthRequest="60"
+                       HeightRequest="60">
+                    <Entry Keyboard="Numeric"/>
+                </Frame>
+                <Frame BackgroundColor="{Binding bgColor}"
+                       BorderColor="Transparent"
+                       WidthRequest="60"
+                       HeightRequest="60">
+                    <Entry Keyboard="Numeric"/>
+                </Frame>
+                <Frame BackgroundColor="{Binding bgColor}"
+                       BorderColor="Transparent"
+                       WidthRequest="60"
+                       HeightRequest="60">
+                    <Entry Keyboard="Numeric"/>
+                </Frame>
+                <Frame BackgroundColor="{Binding bgColor}"
+                       BorderColor="Transparent"
+                       WidthRequest="60"
+                       HeightRequest="60">
+                    <Entry Keyboard="Numeric"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,30,0,0" HorizontalOptions="StartAndExpand">
+                <Label Text="Didn't receive OTP code!"
+                       TextColor="{StaticResource Gray300}"
+                       Margin="40,10,0,0"
+                       FontSize="15"
+                       FontFamily="NotoSansRegular"
+                       HorizontalOptions="Center"/>
+                <Label Text="Resend"
+                       TextColor="White"
+                       Margin="0,10,0,0"
+                       FontAttributes="Bold"
+                       FontSize="15"
+                       FontFamily="NotoSansRegular"
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+            <Frame BackgroundColor="{Binding btnColor}"
+                   WidthRequest="290"
+                   HeightRequest="50"
+                   Margin="0,20,0,0"
+                   CornerRadius="30"
+                   Padding="0,0,0,0"
+                   BorderColor="Transparent">
+                <Button Text="Submit"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        FontSize="15"
+                        Clicked="Submit_Clicked"
+                        FontFamily="NotoSansRegular"
+                        HorizontalOptions="Center"
+                        BackgroundColor="Transparent"/>
+            </Frame>
+        </VerticalStackLayout>
+        <Frame x:Name="alertDisplay" Grid.RowSpan="3" WidthRequest="230" HeightRequest="200" IsVisible="False">
+            <StackLayout Padding="20" BackgroundColor="Transparent" WidthRequest="200" HeightRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <ActivityIndicator IsRunning="True" Color="Black" Margin="0,30,0,0" />
+                <Label Text="Please Wait..." HorizontalOptions="Center" VerticalOptions="Center" Margin="10" />
+            </StackLayout>
+        </Frame>
+    </Grid>
 </ContentPage>

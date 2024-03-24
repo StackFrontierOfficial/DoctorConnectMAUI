@@ -4,7 +4,7 @@
              x:Class="DoctorConnectMAUI.Screens.Auth.WelcomeScreen"
              Title="WelcomeScreen"
              BackgroundImageSource="doctor_bg.jpg"
-             WidthRequest="400">
+             >
     <ContentPage.Resources>
         <ResourceDictionary>
             <LinearGradientBrush x:Key="myBackground" EndPoint="0,1">
@@ -13,7 +13,7 @@
             </LinearGradientBrush>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <Grid >
+    <Grid Background="{StaticResource myBackground}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>

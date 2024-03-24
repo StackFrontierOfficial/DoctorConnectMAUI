@@ -1,4 +1,5 @@
 ﻿using DoctorConnectMAUI.Screens.Auth;
+using DoctorConnectMAUI.Screens.Home;
 
 namespace DoctorConnectMAUI
 {
@@ -8,7 +9,11 @@ namespace DoctorConnectMAUI
 		{
 			InitializeComponent();
 
-			MainPage = new WelcomeScreen();
+			MainPage = new HomeScreen();
+			//MainPage = new RegisterScreen();
+			//MainPage = new VerificationScreen();
+			//MainPage = new VerificationScreen();
+			//MainPage = new WelcomeScreen();
 			//MainPage = new CountryCode();
 		}
 	}
