@@ -13,6 +13,8 @@ namespace DoctorConnectMAUI
 				{
 					fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 					fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+					fonts.AddFont("NotoSans-Bold.ttf", "NotoSansBold");
+					fonts.AddFont("NotoSans-Regular.ttf", "NotoSansRegular");
 				});
 
 #if DEBUG

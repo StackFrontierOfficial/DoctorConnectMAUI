@@ -59,6 +59,14 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\NotoSans-Bold.ttf" />
 	  <None Remove="Resources\Fonts\NotoSans-Regular.ttf" />
+	  <None Remove="Resources\Images\afghanistan.png" />
+	  <None Remove="Resources\Images\albania.png" />
+	  <None Remove="Resources\Images\algeria.png" />
+	  <None Remove="Resources\Images\americansamoa.png" />
+	  <None Remove="Resources\Images\andorra.png" />
+	  <None Remove="Resources\Images\angola.png" />
+	  <None Remove="Resources\Images\china.png" />
+	  <None Remove="Resources\Images\unitedstates.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -66,5 +74,76 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
+	<ItemGroup>
+		<MauiXaml Update="Screens\AboutUs\AboutUsScreen.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Auth\CountryCode.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Auth\RegisterScreen.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Auth\VerificationScreen.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Auth\WelcomeScreen.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Chat\ChatScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\ConsultationDetail\ConsultationDetailScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\DoctorProfile\DoctorProfileScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\EditProfile\EditProfileScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Home\HomeScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\LabAndTestCheckup\LabTestAndHealthCheckUpScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Message\MessageScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Notifications\NotificationScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\PatientDirectory\PatientDirectoryScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\PaymentMethod\PaymentMethodScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Profile\ProfileScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Review\ReviewScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Schedule\ScheduleScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Search\SearchScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Specialist\SpecialistScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\TimeSlots\TimeSlotsScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\ViewAll\ViewAllScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+	</ItemGroup>
+		  
+	
+	
 
 </Project>

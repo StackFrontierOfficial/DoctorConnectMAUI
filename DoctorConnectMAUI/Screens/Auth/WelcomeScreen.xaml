@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DoctorConnectMAUI.Screens.Auth.WelcomeScreen"
+             Title="WelcomeScreen"
+             BackgroundImageSource="doctor_bg.jpg"
+             WidthRequest="400">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="myBackground" EndPoint="0,1">
+                <GradientStop Offset="0" Color="Transparent"/>
+                <GradientStop Offset="1" Color="Black"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <VerticalStackLayout Margin="20,80,0,0">
+            <Label Text="Welcome back"
+                   TextColor="White"
+                   FontSize="30"
+                   FontFamily="NotoSansBold"
+                   FontAttributes="Bold"/>
+            <Label Text="Login in your account"
+                   TextColor="White"
+                   FontSize="15"
+                   Margin="0,10,0,0"
+                   FontFamily="NotoSansRegular"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="1" Spacing="20" VerticalOptions="Center" HorizontalOptions="Center">
+            <Frame BackgroundColor="{Binding bgColor}"
+                   WidthRequest="290"
+                   HeightRequest="50"
+                   Margin="0,70,0,0"
+                   CornerRadius="30"
+                   Padding="0,0,0,0"
+                   BorderColor="Transparent">
+                <Grid ColumnDefinitions=".3*,.7*">
+                    <HorizontalStackLayout Spacing="10">
+                        <ImageButton Source="unitedstates.png"
+                               WidthRequest="30"
+                               Margin="20,0,0,0"
+                               HeightRequest="30"/>
+                        <Label Text="+1"
+                               TextColor="White"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                    <Entry Text="Phone Number"
+                           TextColor="White"
+                           FontSize="15"
+                           FontFamily="NotoSansRegular"
+                           Grid.Column="1"
+                           Margin="0,0,20,0"/>
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="{Binding btnColor}"
+       WidthRequest="290"
+       HeightRequest="50"
+       Margin="0,20,0,0"
+       CornerRadius="30"
+       Padding="0,0,0,0"
+       BorderColor="Transparent">
+                <Button Text="Continue"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        FontSize="15"
+                        FontFamily="NotoSansRegular"
+                        HorizontalOptions="Center"
+                        BackgroundColor="Transparent"/>
+            </Frame>
+            <Label Text="We'll send OTP for Verification"
+                   TextColor="White"
+                   FontFamily="NotoSansRegular"
+                   HorizontalOptions="Center"/>
+            <Frame BackgroundColor="#3b599a"
+                   WidthRequest="290"
+                   HeightRequest="50"
+                   Margin="0,20,0,0"
+                   CornerRadius="30"
+                   Padding="0,0,0,0"
+                   BorderColor="Transparent">
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Image Source="facebook.png"
+                                   WidthRequest="30"
+                                   Margin="20,0,0,0"
+                                   HeightRequest="30"/>
+                    <Button Text="Log in with Facebook"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        FontSize="15"
+                        FontFamily="NotoSansRegular"
+                        HorizontalOptions="Center"
+                        BackgroundColor="Transparent"/>
+                </HorizontalStackLayout>
+            </Frame>
+            <Frame BackgroundColor="#ffffff"
+       WidthRequest="290"
+       HeightRequest="50"
+       Margin="0,20,0,0"
+       CornerRadius="30"
+       Padding="0,0,0,0"
+       BorderColor="Transparent">
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Image Source="google.png"
+                       WidthRequest="30"
+                       Margin="20,0,0,0"
+                       HeightRequest="30"/>
+                    <Button Text="Log in with Google"
+            TextColor="{StaticResource Gray900}"
+            VerticalOptions="Center"
+            FontSize="15"
+                            FontAttributes="Bold"
+            FontFamily="NotoSansRegular"
+            HorizontalOptions="Center"
+            BackgroundColor="Transparent"/>
+                </HorizontalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
