@@ -3,10 +3,65 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DoctorConnectMAUI.Screens.TimeSlots.TimeSlotsScreen"
              Title="TimeSlotsScreen">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/> 
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <HorizontalStackLayout Spacing="20" VerticalOptions="Center" HeightRequest="50"
+                        HorizontalOptions="Start">
+            <Image Source="arrow.png"
+            WidthRequest="20"
+            Margin="20,10,0,0"
+            HeightRequest="20"/>
+            <Label Text="Time Slots"
+            FontSize="16"
+            FontAttributes="Bold"
+            Margin="0,15,0,0"
+            FontFamily="NotoSansBold"/>
+        </HorizontalStackLayout>
+
+        <Grid Grid.Row="1" ColumnDefinitions=".2*,.5*,.3*" ColumnSpacing="20" Margin="30,0,0,0">
+            <Frame BackgroundColor="Transparent" HeightRequest="100"
+                   WidthRequest="100"
+                   Padding="0,0,0,0"
+                   Margin="30,15,10,0"
+                   BorderColor="#6A79F9"
+                   CornerRadius="60">
+                <Image Source="doctor2.png"
+            HeightRequest="98"
+            WidthRequest="70"
+            Aspect="AspectFill" />
+            </Frame>
+            <VerticalStackLayout Grid.Column="1" Spacing="5" Margin="20,20,0,0">
+                <Label Text="Dr. Brayden Trump"
+                       FontSize="15"
+                       FontFamily="NotoSansBold"
+                       FontAttributes="Bold"/>
+                <Label Text="Pediatrician"
+                       FontSize="13"/>
+                <Label Text="10 Years Experience"
+                       FontSize="12"
+                       TextColor="#6A79F9"/>
+                <Label Text="$39"
+                       FontSize="17"
+                       FontFamily="NotoSansBold"
+                       FontAttributes="Bold"/>
+            </VerticalStackLayout>
+            <Button Text="View Profile"
+                   Grid.Column="2"
+                    BackgroundColor="Transparent"
+                   TextColor="#6A79F9"
+                    Padding="0,20,0,0"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                    HorizontalOptions="Start"
+                   FontSize="13"/>
+        </Grid>
+        <VerticalStackLayout Grid.Row="2">
+            <Label
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>

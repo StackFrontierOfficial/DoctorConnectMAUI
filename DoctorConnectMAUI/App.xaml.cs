@@ -2,6 +2,7 @@
 using DoctorConnectMAUI.Screens.Home;
 using DoctorConnectMAUI.Screens.Search;
 using DoctorConnectMAUI.Screens.Specialist;
+using DoctorConnectMAUI.Screens.TimeSlots;
 
 namespace DoctorConnectMAUI
 {
@@ -11,7 +12,8 @@ namespace DoctorConnectMAUI
 		{
 			InitializeComponent();
 
-			MainPage = new SpecialistScreen();
+			MainPage = new TimeSlotsScreen();
+			//MainPage = new SpecialistScreen();
 			//MainPage = new Speciality();
 			//MainPage = new SearchScreen();
 			//MainPage = new CitySelection();

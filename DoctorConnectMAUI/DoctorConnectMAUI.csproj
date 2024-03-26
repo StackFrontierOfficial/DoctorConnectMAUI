@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\fontawesome-webfont.ttf" />
 	  <None Remove="Resources\Fonts\FontAwesome.ttf" />
 	  <None Remove="Resources\Fonts\NotoSans-Bold.ttf" />
 	  <None Remove="Resources\Fonts\NotoSans-Regular.ttf" />

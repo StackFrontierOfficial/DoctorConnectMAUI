@@ -44,12 +44,25 @@
                                 <ColumnDefinition Width=".3*"/>
                                 <ColumnDefinition Width=".7*"/>
                             </Grid.ColumnDefinitions>
-                           
+                            <Frame BackgroundColor="Transparent" HeightRequest="100"
+                                   WidthRequest="100"
+                                   Padding="0,0,0,0"
+                                   Margin="0,15,0,0"
+                                   BorderColor="{StaticResource Gray200}"
+                                   CornerRadius="60">
+                                <Frame.Shadow>
+                                    <Shadow Brush="Black"
+                                            Offset="50,50"
+                                            Opacity="0.7" />
+                                </Frame.Shadow>
                                 <Image Source="{Binding Image}"
-                                       
-                                           Aspect="AspectFill" />
+                                       HeightRequest="80"
+                                       WidthRequest="80"
+                                       Aspect="Fill" />
+                            </Frame>
+                            
                            
-                            <VerticalStackLayout Grid.Column="1" Margin="10,-10,0,0">
+                            <VerticalStackLayout Grid.Column="1" Margin="20,-10,0,0">
                                 <Label Text="{Binding Name}"
                                        FontSize="16"
                                        FontAttributes="Bold"
@@ -87,7 +100,7 @@
                                         BorderWidth="5"
                                         BorderColor="#FDEDD1"/>
                                 <Button Text="Book Appointment"
-                                        BorderWidth="1"
+                                       BorderWidth="4"
                                         HorizontalOptions="Center"
                                         Padding="10,0,10,0"
                                         HeightRequest="40"
