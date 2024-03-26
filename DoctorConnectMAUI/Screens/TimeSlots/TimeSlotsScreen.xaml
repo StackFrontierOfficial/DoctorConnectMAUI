@@ -61,7 +61,7 @@
                    FontSize="13"/>
         </Grid>
         <VerticalStackLayout Grid.Row="2">
-            <Label
+           
         </VerticalStackLayout>
     </Grid>
 </ContentPage>
