@@ -66,11 +66,20 @@
 	  <None Remove="Resources\Images\americansamoa.png" />
 	  <None Remove="Resources\Images\andorra.png" />
 	  <None Remove="Resources\Images\angola.png" />
+	  <None Remove="Resources\Images\arrow.png" />
+	  <None Remove="Resources\Images\arrowup.png" />
+	  <None Remove="Resources\Images\calendar.png" />
+	  <None Remove="Resources\Images\chat.png" />
 	  <None Remove="Resources\Images\china.png" />
+	  <None Remove="Resources\Images\clock.png" />
+	  <None Remove="Resources\Images\contact.png" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\homebutton.png" />
 	  <None Remove="Resources\Images\leftarrow.png" />
 	  <None Remove="Resources\Images\mapicon.png" />
 	  <None Remove="Resources\Images\next.png" />
 	  <None Remove="Resources\Images\notification.png" />
+	  <None Remove="Resources\Images\star.png" />
 	  <None Remove="Resources\Images\unitedstates.png" />
 	</ItemGroup>
 
@@ -110,6 +119,9 @@
 		<MauiXaml Update="Screens\EditProfile\EditProfileScreen.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="Screens\Home\CitySelection.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Screens\Home\HomeScreen.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
@@ -138,6 +150,9 @@
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Screens\Search\SearchScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Search\Speciality.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Screens\Specialist\SpecialistScreen.xaml">

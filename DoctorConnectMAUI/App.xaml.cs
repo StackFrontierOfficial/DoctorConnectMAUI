@@ -1,5 +1,7 @@
 ﻿using DoctorConnectMAUI.Screens.Auth;
 using DoctorConnectMAUI.Screens.Home;
+using DoctorConnectMAUI.Screens.Search;
+using DoctorConnectMAUI.Screens.Specialist;
 
 namespace DoctorConnectMAUI
 {
@@ -9,7 +11,11 @@ namespace DoctorConnectMAUI
 		{
 			InitializeComponent();
 
-			MainPage = new HomeScreen();
+			MainPage = new SpecialistScreen();
+			//MainPage = new Speciality();
+			//MainPage = new SearchScreen();
+			//MainPage = new CitySelection();
+			//MainPage = new HomeScreen();
 			//MainPage = new RegisterScreen();
 			//MainPage = new VerificationScreen();
 			//MainPage = new VerificationScreen();

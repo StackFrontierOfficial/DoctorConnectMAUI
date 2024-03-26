@@ -94,10 +94,10 @@
 
                     </Frame>
                     <Frame WidthRequest="170"
-HeightRequest="150"
-Margin="30,20,0,0"
-Padding="0,0,0,0"
-HasShadow="True">
+                           HeightRequest="150"
+                           Margin="30,20,0,0"
+                           Padding="0,0,0,0"
+                           HasShadow="True">
                         <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Image Source="woman.png"
         VerticalOptions="Center"
@@ -113,21 +113,21 @@ HasShadow="True">
 
                     </Frame>
                     <Frame WidthRequest="170"
-HeightRequest="150"
-Margin="30,20,0,0"
-Padding="0,0,0,0"
-HasShadow="True">
+                           HeightRequest="150"
+                           Margin="30,20,0,0"
+                           Padding="0,0,0,0"
+                           HasShadow="True">
                         <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Image Source="pediatrician.png"
-        VerticalOptions="Center"
-        WidthRequest="60"
-        HeightRequest="60"
-        Aspect="AspectFit"
-        HorizontalOptions="Center"/>
+                                   VerticalOptions="Center"
+                                   WidthRequest="60"
+                                   HeightRequest="60"
+                                   Aspect="AspectFit"
+                                   HorizontalOptions="Center"/>
                             <Label Text="Pediatrician"
-        FontAttributes="Bold"
-        FontFamily="NotoSansbold"
-        Margin="0,10,0,0"/>
+                                   FontAttributes="Bold"
+                                   FontFamily="NotoSansbold"
+                                   Margin="0,10,0,0"/>
                         </VerticalStackLayout>
 
                     </Frame>
@@ -145,6 +145,119 @@ HasShadow="True">
                              HeightRequest="20"/>
             </StackLayout>
         </VerticalStackLayout>
-       
+        <ScrollView Grid.Row="3">
+            <VerticalStackLayout>
+                <Frame BackgroundColor="Transparent"
+                       WidthRequest="300"
+                       Margin="0,20,0,0"
+                       HeightRequest="160"
+                       Padding="0,0,0,0"
+                       HasShadow="True">
+                    <Grid ColumnDefinitions=".4*,.6*">
+                        <Image Source="lab1.png"
+                               Aspect="Fill"/>
+                        <StackLayout Orientation="Vertical" Grid.Column="1">
+                            <Label Text="New York City DOHMH Public Health Laboratory"
+                                   FontSize="15"
+                                   Margin="10,10,10,10"
+                                   FontAttributes="Bold"
+                                   FontFamily="NotoSansBold"/>
+                            <Label Text="455 Ist Avenue, New York,NY 10016,Unite..."
+                                   FontSize="13"
+                                   TextColor="{StaticResource Gray400}"
+                                   Margin="10,-5,10,10"
+                                   FontFamily="NotoSansRegular"/>
+                            <Button Text="Call Now"
+                                    TextColor="#5c6ef4"
+                                    BorderColor="#5c6ef4"
+                                    Padding="0,0,0,0"
+                                    BorderWidth="1"
+                                    BackgroundColor="Transparent"
+                                    WidthRequest="80"
+                                    HeightRequest="35"
+                                    Margin="10,-10,0,0"
+                                    HorizontalOptions="Start"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame BackgroundColor="Transparent"
+                       WidthRequest="300"
+                       Margin="0,20,0,50"
+                       HeightRequest="170"
+                       Padding="0,0,0,0"
+                       HasShadow="True">
+                    <Grid ColumnDefinitions=".4*,.6*">
+                        <Image Source="lab2.png"
+                Aspect="Fill"/>
+                        <StackLayout Orientation="Vertical" Grid.Column="1">
+                            <Label Text="New York City DOHMH Public Health Laboratory"
+                                   FontSize="15"
+                                   Margin="10,10,10,10"
+                                   FontAttributes="Bold"
+                                   FontFamily="NotoSansBold"/>
+                            <Label Text="455 Ist Avenue, New York,NY 10016,Unite..."
+                                   FontSize="13"
+                                   TextColor="{StaticResource Gray400}"
+                                   Margin="10,-5,10,10"
+                                   FontFamily="NotoSansRegular"/>
+                            <Button Text="Call Now"
+                                    TextColor="#5c6ef4"
+                                    BorderColor="#5c6ef4"
+                                    Padding="0,0,0,0"
+                                    BorderWidth="2"
+                                    BackgroundColor="Transparent"
+                                    WidthRequest="100"
+                                    HeightRequest="35"
+                                    Margin="10,0,0,0"
+                                    HorizontalOptions="Start"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+        <Frame Grid.Row="3" 
+               VerticalOptions="End"
+               Padding="0,0,0,0"
+               BorderColor="Transparent"
+               CornerRadius="0"
+               Margin="0,0,0,-5"
+               HeightRequest="50">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".25*" />
+                    <ColumnDefinition Width=".25*" />
+                    <ColumnDefinition Width=".25*" />
+                    <ColumnDefinition Width=".25*" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="homebutton.png"
+                            WidthRequest="30"
+                             Margin="20,10,0,0"
+                            HeightRequest="30"
+                            VerticalOptions="Center"
+                             HorizontalOptions="Center"/>
+                <ImageButton Source="calendar.png"
+                             Grid.Column="1"
+            WidthRequest="20"
+             Margin="10,10,0,0"
+            HeightRequest="20"
+            VerticalOptions="Center"
+             HorizontalOptions="Center"/>
+                <ImageButton Source="chat.png"
+                             Grid.Column="2"
+            WidthRequest="20"
+             Margin="10,10,0,0"
+            HeightRequest="20"
+            VerticalOptions="Center"
+             HorizontalOptions="Center"/>
+                <ImageButton Source="contact.png"
+                             Grid.Column="3"
+            WidthRequest="20"
+             Margin="10,10,0,0"
+            HeightRequest="20"
+            VerticalOptions="Center"
+             HorizontalOptions="Center"/>
+            </Grid>
+        </Frame>
+        
     </Grid>
 </ContentPage>

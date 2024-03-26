@@ -3,10 +3,102 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DoctorConnectMAUI.Screens.Specialist.SpecialistScreen"
              Title="SpecialistScreen">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <HorizontalStackLayout Spacing="20" VerticalOptions="Center" HeightRequest="50"
+                            HorizontalOptions="Start">
+            <Image Source="arrow.png"
+                WidthRequest="20"
+                Margin="20,10,0,0"
+                HeightRequest="20"/>
+            <Label Text="Pediatrician"
+                FontSize="16"
+                FontAttributes="Bold"
+                Margin="0,15,0,0"
+                FontFamily="NotoSansBold"/>
+        </HorizontalStackLayout>
+        <Frame BackgroundColor="Transparent"
+                Grid.Row="1"
+                WidthRequest="300"
+                HasShadow="True"
+                HeightRequest="40"
+                Margin="0,20,0,0"
+                Padding="0,0,0,0"
+                CornerRadius="10">
+            <SearchBar Placeholder="Search Pediatrician"/>
+        </Frame>
+        <ListView ItemsSource="{Binding doctors}" HasUnevenRows="True" Grid.Row="2" Margin="20,20,0,0" SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="20,20,0,30" HeightRequest="170" RowSpacing="40" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height=".7*"/>
+                                <RowDefinition Height=".3*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".3*"/>
+                                <ColumnDefinition Width=".7*"/>
+                            </Grid.ColumnDefinitions>
+                           
+                                <Image Source="{Binding Image}"
+                                       
+                                           Aspect="AspectFill" />
+                           
+                            <VerticalStackLayout Grid.Column="1" Margin="10,-10,0,0">
+                                <Label Text="{Binding Name}"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       FontFamily="NotoSansBold"/>
+                                <Label Text="Pediatrician"
+                                       FontSize="12"
+                                       FontFamily="NotoSansRegular"/>
+                                <Label Text="{Binding Experience}"
+                                       FontSize="12"
+                                       FontFamily="notoSansRegular"/>
+                                <StackLayout Orientation="Horizontal" Spacing="20" Margin="0,5,0,0">
+                                    <Image Source="star.png"
+                                           WidthRequest="10"
+                                           HeightRequest="10"/>
+                                    <Label Text="{Binding Rating}"
+                                           FontSize="12"
+                                           Margin="-10,0,0,0"
+                                           FontAttributes="Bold"/>
+                                    <Image Source="chat.png"
+                                           WidthRequest="10"
+                                           Margin="10,0,-15,0"
+                                           HeightRequest="10"/>
+                                    <Label Text="{Binding Review}"
+                                           FontSize="12"
+                                           FontAttributes="Bold"/>
+                                </StackLayout>
+                            </VerticalStackLayout>
+                            <HorizontalStackLayout Grid.ColumnSpan="2" Grid.Row="1" Spacing="10" Margin="0,20,0,0" HorizontalOptions="FillAndExpand">
+                                <Button Text="Book Vedio Consult"
+                                        TextColor="#FB970F"
+                                        Padding="10,0,10,0"
+                                        BackgroundColor="#FDEDD1"
+                                         HeightRequest="40"
+                                        FontSize="12"
+                                        BorderWidth="5"
+                                        BorderColor="#FDEDD1"/>
+                                <Button Text="Book Appointment"
+                                        BorderWidth="1"
+                                        HorizontalOptions="Center"
+                                        Padding="10,0,10,0"
+                                        HeightRequest="40"
+                                        TextColor="#7E8AF1"
+                                        Background="#E4E8FD"
+                                        BorderColor="#E4E8FD"/>
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>
