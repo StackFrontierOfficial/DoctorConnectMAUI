@@ -3,10 +3,126 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DoctorConnectMAUI.Screens.LabAndTestCheckup.LabTestAndHealthCheckUpScreen"
              Title="LabTestAndHealthCheckUpScreen">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <HorizontalStackLayout Spacing="20" VerticalOptions="Center" HeightRequest="50"
+                    HorizontalOptions="Start">
+            <Image Source="arrow.png"
+                   WidthRequest="20"
+                   Margin="20,10,0,0"
+                   HeightRequest="20"/>
+            <Label Text="Lab tests &amp; health checkup"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   Margin="0,15,0,0"
+                   FontFamily="NotoSansBold"/>
+        </HorizontalStackLayout>
+        <Grid Grid.Row="1" ColumnDefinitions=".3*,.7*" Margin="20,20,0,0" VerticalOptions="Start">
+            <Frame BackgroundColor="Transparent"
+                   Padding="0,0,0,0"
+                   Margin="0,0,0,0"
+                   VerticalOptions="Start"
+                   HeightRequest="85">
+                <Image Source="lab1.jpg"
+                       Aspect="Fill"/>
+            </Frame>
+            <VerticalStackLayout Grid.Column="1" Margin="10,0,10,0" Spacing="5">
+                <Label Text="New York City DOHMH Public Health Laboratory"
+                       TextColor="Black"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       FontFamily="NotoSansBold"/>
+                <Label Text="455 1st Avenue,New York,NY 10016, United States"
+                       TextColor="{StaticResource Gray400}"/>
+                <Label Text="Timing:"
+                       TextColor="#6A79F9"/>
+                <Label Text="9:00 AM to 8:00 PM"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="12"/>
+            </VerticalStackLayout>
+        </Grid>
+        <BoxView Grid.Row="2" Margin="0,20,0,0" BackgroundColor="{StaticResource Gray200}"
+HeightRequest="2"/>
+        <ScrollView Grid.Row="3">
+            <VerticalStackLayout  Margin="20,20,20,0" Spacing="10">
+                <Label Text="Address"
+                       TextColor="#6A79F9"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       FontFamily="NotoSansBold"/>
+                <Label Text="455 1st Avenue,New York,NY 10016, United States"
+                       TextColor="Black"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       FontFamily="NotoSansBold"/>
+                <Frame BackgroundColor="Transparent"
+                       Padding="0,0,0,0"
+                       HasShadow="True"
+                       HeightRequest="210"
+                       CornerRadius="20">
+                    <Image Source="location2.jpg"
+                           Aspect="Fill"/>
+                </Frame>
+                <Label Text="Facilities"
+                       TextColor="#6A79F9"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       FontFamily="NotoSansBold"/>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="tick.png"
+                           WidthRequest="20"
+                           HeightRequest="20"/>
+                    <Label Text="Parking available"
+                            TextColor="Black"
+                           FontSize="14"
+                           FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="tick.png"
+                           WidthRequest="20"
+                           HeightRequest="20"/>
+                    <Label Text="E-Reports available"
+                           TextColor="Black"
+                           FontSize="14"
+                           FontAttributes="Bold"/>
+                </StackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+        <Frame Grid.Row="3"
+               VerticalOptions="End"
+               CornerRadius="0"
+               HeightRequest="70"
+               BorderColor="{StaticResource Gray100}"
+               Padding="0,0,0,0"
+               Margin="0,0,0,-5">
+            <HorizontalStackLayout Spacing="10">
+                <Button Text="Message"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        FontSize="15"
+                        Background="Transparent"
+                        HeightRequest="50"
+                        WidthRequest="150"
+                        BorderWidth="2"
+                        Margin="20,0,0,0"
+                        BorderColor="{StaticResource Gray200}"/>
+                <Button Text="Call Now"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="15"
+                        Background="#6A79F9"
+                        HeightRequest="50"
+                        WidthRequest="150"
+                        BorderWidth="2"
+                        Margin="10,0,0,0"
+                        BorderColor="#6A79F9"/>
+            </HorizontalStackLayout>
+        </Frame>
+    </Grid>
 </ContentPage>

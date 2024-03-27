@@ -78,10 +78,9 @@
                                        Grid.ColumnSpan="2"
                                        HeightRequest="20"
                                        Text="{Binding UserReview}"
-                                          Margin="20,-10,0,0" />
+                                       Margin="20,-10,0,0" />
                             </Grid>
                         </Frame>
-                        
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

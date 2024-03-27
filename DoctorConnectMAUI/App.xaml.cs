@@ -2,6 +2,7 @@
 using DoctorConnectMAUI.Screens.ConsultationDetail;
 using DoctorConnectMAUI.Screens.DoctorProfile;
 using DoctorConnectMAUI.Screens.Home;
+using DoctorConnectMAUI.Screens.LabAndTestCheckup;
 using DoctorConnectMAUI.Screens.PaymentMethod;
 using DoctorConnectMAUI.Screens.Review;
 using DoctorConnectMAUI.Screens.Search;
@@ -16,7 +17,8 @@ namespace DoctorConnectMAUI
 		{
 			InitializeComponent();
 
-			MainPage = new ReviewScreen();
+			MainPage = new LabTestAndHealthCheckUpScreen();
+			//MainPage = new ReviewScreen();
 			//MainPage = new DoctorProfileScreen();
 			//MainPage = new PaymentMethodScreen();
 			//MainPage = new ConsultationDetailScreen();

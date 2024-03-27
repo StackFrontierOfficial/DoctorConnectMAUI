@@ -86,6 +86,7 @@
 	  <None Remove="Resources\Images\next.png" />
 	  <None Remove="Resources\Images\notification.png" />
 	  <None Remove="Resources\Images\star.png" />
+	  <None Remove="Resources\Images\tick.png" />
 	  <None Remove="Resources\Images\unitedstates.png" />
 	</ItemGroup>
 
