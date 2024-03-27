@@ -6,4 +6,12 @@ public partial class PaymentMethodScreen : ContentPage
 	{
 		InitializeComponent();
 	}
+    private  void Pay_Clicked(object sender, EventArgs e)
+    {
+        alertDisplay.IsVisible = true;
+        paymentPage.BackgroundColor = Color.FromRgb(151,151,151);
+
+
+
+    }
 }

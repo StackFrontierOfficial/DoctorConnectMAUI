@@ -60,8 +60,444 @@
                     HorizontalOptions="Start"
                    FontSize="13"/>
         </Grid>
-        <VerticalStackLayout Grid.Row="2">
-           
+        <VerticalStackLayout Grid.Row="2" Margin="0,20,0,0">
+            <Label Text="July 2021"
+                  VerticalOptions="Start"
+                  HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                  FontSize="12"/>
+            <Grid BackgroundColor="Transparent"
+                  ColumnDefinitions=".1*,*,.1*">
+                <ImageButton Source="back.png"
+                            WidthRequest="20"
+                            HeightRequest="20"/>
+                <ScrollView Grid.Column="1" Orientation="Horizontal">
+                    <HorizontalStackLayout Spacing="20" Margin="20,0,0,0">
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Sun"
+                                   TextColor="{StaticResource Gray300}"
+                                   FontSize="12"/>
+                            <Label Text="11"
+                                   TextColor="{StaticResource Gray300}"
+                                   FontSize="12"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Mon"
+                                   TextColor="Black"
+                                   FontSize="12"/>
+                            <Label Text="12"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Tue"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                            <Label Text="13"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Wed"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                            <Label Text="14"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                            </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Thu"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                            <Label Text="15"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Fri"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                            <Label Text="16"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Sat"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                            <Label Text="17"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Thu"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                            <Label Text="15"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Fri"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                            <Label Text="16"
+                                   FontAttributes="Bold"
+                                  TextColor="{StaticResource Gray900}"
+                                  FontSize="12"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Sat"
+                                   TextColor="{StaticResource Gray900}"
+                                   FontSize="12"/>
+                            <Label Text="17"
+                                   FontAttributes="Bold"
+                                  TextColor="{StaticResource Gray900}"
+                                  FontSize="12"/>
+                        </StackLayout>
+                    </HorizontalStackLayout>
+                </ScrollView>
+                <ImageButton Source="next.png"
+                             Grid.Column="2"
+                             Margin="-0,-5,0,0"
+                             WidthRequest="30"
+                             HeightRequest="30"/>
+            </Grid>
+            <BoxView HeightRequest="1"
+                     BackgroundColor="{StaticResource Gray200}"
+                     Margin="0,10,0,0"/>
         </VerticalStackLayout>
+        <ScrollView Grid.Row="3">
+            <VerticalStackLayout>
+                <StackLayout Orientation="Horizontal" Margin="20,20,0,0" Spacing="10">
+                    <Image Source="morning.png"
+                           WidthRequest="20"
+                           HeightRequest="20"/>
+                    <Label Text="8 Slots"
+                           TextColor="Black"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           FontFamily="NotoSansBold"/>
+                </StackLayout>
+                <Grid  VerticalOptions="Center" HorizontalOptions="Center" RowSpacing="10" Margin="0,10,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Margin="0,10,0,0"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Padding="0,0,0,0">
+                        <Button Text="8:00 AM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="#7E8AF1"
+                           BorderColor="#7E8AF1"
+                           Grid.Column="1"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="8:30 AM"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Column="2"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="9:00 AM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Row="1"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="0,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="9:30 AM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Column="1"
+                           Grid.Row="1"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="10:00 AM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Column="2"
+                           Grid.Row="1"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="10:30 AM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Row="2"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="0,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="11:00 AM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="11:30 AM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+
+                </Grid>
+                <StackLayout Orientation="Horizontal" Margin="20,20,0,0" Spacing="10">
+                    <Image Source="sun.png"
+                           WidthRequest="20"
+                           HeightRequest="20"/>
+                    <Label Text="12 Slots"
+                           TextColor="Black"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           FontFamily="NotoSansBold"/>
+                </StackLayout>
+                <Grid  VerticalOptions="Center" HorizontalOptions="Center" RowSpacing="10" Margin="0,10,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        
+                    </Grid.ColumnDefinitions>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Margin="0,10,0,0"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Padding="0,0,0,0">
+                        <Button Text="12:30 PM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Column="1"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="1:00 PM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Column="2"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="1:30 PM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Row="1"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="0,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="2:00 PM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Column="1"
+                           Grid.Row="1"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="2:30 PM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Column="2"
+                           Grid.Row="1"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="3:00 PM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Row="2"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="0,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="3:30 PM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="4:00 PM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Row="2"
+                           Grid.Column="2"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="4:30 PM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                            BorderColor="#7E8AF1"
+                             Grid.Row="3"
+                             WidthRequest="90"
+                             HeightRequest="40"
+                             Margin="0,10,0,0"
+                             Padding="0,0,0,0">
+                         <Button Text="5:00 PM"
+                                 TextColor="#7E8AF1"
+                                 BackgroundColor="Transparent"
+                                 Padding="10,0,10,0"
+                                 BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Row="3"
+                           Grid.Column="1"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="5:30 PM"
+                               TextColor="#7E8AF1"
+                               BackgroundColor="Transparent"
+                               Padding="10,0,10,0"
+                               BorderColor="#7E8AF1"/>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#7E8AF1"
+                           Grid.Row="3"
+                           Grid.Column="2"
+                           WidthRequest="90"
+                           HeightRequest="40"
+                           Margin="20,10,0,0"
+                           Padding="0,0,0,0">
+                        <Button Text="6:00 PM"
+                                TextColor="#7E8AF1"
+                                BackgroundColor="Transparent"
+                                Padding="10,0,10,0"
+                                BorderColor="#7E8AF1"/>
+                    </Frame>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+        <Button Text="Book Now"
+                Background="#7E8AF1"
+                Grid.Row="3"
+                Margin="20,0,20,0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End"
+                TextColor="White"/>
     </Grid>
 </ContentPage>

@@ -2,11 +2,165 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DoctorConnectMAUI.Screens.PaymentMethod.PaymentMethodScreen"
-             Title="PaymentMethodScreen">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="PaymentMethodScreen"
+             x:Name="paymentPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <HorizontalStackLayout Spacing="20" VerticalOptions="Center" HeightRequest="50"
+                 HorizontalOptions="FillAndExpand" BackgroundColor="#6A79F9">
+            <Image Source="arrow.png"
+                   WidthRequest="20"
+                   Margin="20,10,0,0"
+                   HeightRequest="20"/>
+            <Label Text="Select Payment Method"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   Margin="0,15,0,0"
+                   FontFamily="NotoSansBold"/>
+        </HorizontalStackLayout>
+        <Frame BackgroundColor="#D2D7EE"
+               HeightRequest="50"
+               Grid.Row="1"
+               Padding="0,0,0,0"
+               CornerRadius="0">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Pay:"
+                       TextColor="Black"
+                       FontSize="15"
+                       VerticalTextAlignment="Center"
+                       Margin="20,0,0,0"
+                       FontAttributes="Bold"
+                       FontFamily="NotoSansBold"/>
+                <Label Text="$39"
+                       TextColor="Black"
+                       FontSize="15"
+                       VerticalTextAlignment="Center"
+                       Margin="0,0,0,0"
+                       FontAttributes="Bold"
+                       FontFamily="NotoSansBold"/>
+            </StackLayout>
+        </Frame>
+        <VerticalStackLayout Grid.Row="2" Margin="20,20,20,0" Spacing="20">
+            <Frame BackgroundColor="Transparent"
+                   Padding="0,0,0,0"
+                   HeightRequest="70">
+                <Grid ColumnDefinitions=".3*,.5*,.2*">
+                    <Image Source="cashondelivery.png"
+                           WidthRequest="30"
+                           HeightRequest="30"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"/>
+                    <Label Text="Pay on Visit"
+                           TextColor="#6A79F9"
+                           Grid.Column="1"
+                           FontAttributes="Bold"
+                           FontSize="15"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"/>
+                    <RadioButton Grid.Column="2"
+                                 HorizontalOptions="Center"/>
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="Transparent"
+        Padding="0,0,0,0"
+        HeightRequest="70">
+                <Grid ColumnDefinitions=".3*,.5*,.2*">
+                    <Image Source="amazonpay.png"
+                WidthRequest="30"
+                HeightRequest="30"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+                    <Label Text="Amazon Pay"
+                TextColor="#6A79F9"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="15"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"/>
+                    <RadioButton Grid.Column="2"
+                      HorizontalOptions="Center"/>
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="Transparent"
+        Padding="0,0,0,0"
+        HeightRequest="70">
+                <Grid ColumnDefinitions=".3*,.5*,.2*">
+                    <Image Source="card.png"
+                WidthRequest="30"
+                HeightRequest="30"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+                    <Label Text="Card"
+                TextColor="#6A79F9"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="15"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"/>
+                    <RadioButton Grid.Column="2"
+                      HorizontalOptions="Center"/>
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="Transparent"
+        Padding="0,0,0,0"
+        HeightRequest="70">
+                <Grid ColumnDefinitions=".3*,.5*,.2*">
+                    <Image Source="paypal.png"
+                WidthRequest="30"
+                HeightRequest="30"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+                    <Label Text="PayPal"
+                TextColor="#6A79F9"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="15"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"/>
+                    <RadioButton Grid.Column="2"
+                      HorizontalOptions="Center"/>
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="Transparent"
+        Padding="0,0,0,0"
+        HeightRequest="70">
+                <Grid ColumnDefinitions=".3*,.5*,.2*">
+                    <Image Source="skrill.png"
+                WidthRequest="30"
+                HeightRequest="30"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+                    <Label Text="Skrill"
+                TextColor="#6A79F9"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="15"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"/>
+                    <RadioButton Grid.Column="2"
+                      HorizontalOptions="Center"/>
+                </Grid>
+            </Frame>
+            
+        </VerticalStackLayout>
+        <Button Text="Pay"
+        Background="#7E8AF1"
+        Grid.Row="2"
+        Margin="20,0,20,10"
+        Clicked="Pay_Clicked"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="End"
+        TextColor="White"/>
+        <Frame x:Name="alertDisplay" Grid.RowSpan="3" WidthRequest="230" HeightRequest="200" IsVisible="False">
+            <StackLayout Padding="20" BackgroundColor="Transparent" WidthRequest="200" HeightRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                <Image Source="check.png" WidthRequest="30" HeightRequest="30" Margin="0,30,0,0"/>
+                <Label Text="Success" HorizontalOptions="Center" VerticalOptions="Center" Margin="10" FontSize="17" FontAttributes="Bold"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
 </ContentPage>

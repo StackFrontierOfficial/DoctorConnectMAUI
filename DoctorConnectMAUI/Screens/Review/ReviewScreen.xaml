@@ -3,10 +3,88 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DoctorConnectMAUI.Screens.Review.ReviewScreen"
              Title="ReviewScreen">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <VerticalStackLayout>
+            <HorizontalStackLayout Spacing="20" VerticalOptions="Center" HeightRequest="50"
+            HorizontalOptions="Start">
+                <Image Source="arrow.png"
+              WidthRequest="20"
+              Margin="20,10,0,0"
+              HeightRequest="20"/>
+                <Label Text="8 Review Found"
+              FontSize="16"
+              FontAttributes="Bold"
+              Margin="0,15,0,0"
+              FontFamily="NotoSansBold"/>
+            </HorizontalStackLayout>
+            <BoxView BackgroundColor="{StaticResource Gray300}"
+                     HeightRequest="1"/>
+        </VerticalStackLayout>
+        <ListView ItemsSource="{Binding Reviews}" 
+                  Grid.Row="1"
+                  Margin="20,20,0,0"
+                  HasUnevenRows="True" 
+                  SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame BackgroundColor="Transparent"
+                               Padding="0,0,0,0"
+                               Margin="0,20,20,0"
+                               HeightRequest="100"
+                               HasShadow="True">
+                            <Grid RowDefinitions=".8*,.2*" ColumnDefinitions=".3*,.7*" Padding="0,10,0,0">
+                                <Frame BackgroundColor="Transparent"
+                                       WidthRequest="50"
+                                       HeightRequest="50"
+                                       Padding="0,0,0,0"
+                                       Margin="10,-10,0,0"
+                                       CornerRadius="30">
+                                    <Image Source="{Binding UserImage}"
+                                           Aspect="Fill"/>
+                                </Frame>
+                                <VerticalStackLayout Margin="10,0,0,0" Grid.Column="1">
+                                    <Label Text="{Binding Name}"
+                                           TextColor="Black"
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           FontFamily="NotoSansBold"/>
+                                    <Label Text="{Binding ReviewDate}"
+                                           TextColor="{StaticResource Gray300}"
+                                           FontSize="12"/>
+                                    <StackLayout Orientation="Horizontal" Spacing="5" Margin="0,5,0,0">
+                                        <Image Source="star.png"
+                                               WidthRequest="10"
+                                               HeightRequest="10"/>
+                                        <Image Source="star.png"
+                                               WidthRequest="10"
+                                               HeightRequest="10"/>
+                                        <Image Source="star.png"
+                                               WidthRequest="10"
+                                               HeightRequest="10"/>
+                                        <Image Source="star.png"
+                                               WidthRequest="10"
+                                               HeightRequest="10"/>
+                                        <Image Source="star.png"
+                                               WidthRequest="10"
+                                               HeightRequest="10"/>
+                                    </StackLayout>
+                                </VerticalStackLayout>
+                                <Label Grid.Row="1" 
+                                       Grid.ColumnSpan="2"
+                                       HeightRequest="20"
+                                       Text="{Binding UserReview}"
+                                          Margin="20,-10,0,0" />
+                            </Grid>
+                        </Frame>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>
