@@ -3,10 +3,354 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DoctorConnectMAUI.Screens.Profile.ProfileScreen"
              Title="ProfileScreen">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <VerticalStackLayout Spacing="10">
+            <Grid  ColumnDefinitions=".2*,.6*,.2*"   HeightRequest="70">
+                <Frame BackgroundColor="Transparent"
+           BorderColor="Transparent"
+           Padding="0,0,0,0"
+           Margin="20,10,0,0"
+           WidthRequest="60"
+           HeightRequest="60"
+           CornerRadius="30">
+                    <Image Source="user3.png"
+               Aspect="Fill"/>
+                </Frame>
+
+                <Label Text="Ellison Perry"
+           Grid.Column="1"
+           HorizontalOptions="Start"
+           VerticalOptions="Center"
+           FontSize="20"
+           FontAttributes="Bold"
+           Margin="15,5,0,0"
+           FontFamily="NotoSansBold"/>
+                <Button Text="Edit Profile"
+            Grid.Column="2"
+            TextColor="#6A79F9"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Padding="0,0,0,0"
+            Margin="0,0,5,0"
+            BackgroundColor="Transparent"
+            FontAttributes="Bold"
+            FontSize="13"/>
+            </Grid>
+            <BoxView HeightRequest="1"
+                     BackgroundColor="{StaticResource Gray300}"/>
+        </VerticalStackLayout>
+        <ScrollView Grid.Row="1" Orientation="Vertical">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Account Info"
+                   Grid.Column="1"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   Margin="15,5,0,0"
+                   FontFamily="NotoSansBold"/>
+                    <Grid  ColumnDefinitions=".2*,.6*,.2*"   HeightRequest="70">
+                        <Frame BackgroundColor="#E7EAFD"
+                       BorderColor="#6676F6"
+                       Padding="0,0,0,0"
+                       Margin="20,10,0,0"
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       CornerRadius="30">
+                            <Label Text="&#xf007;"
+                           TextColor="#6676F6"
+                           FontSize="25"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           FontFamily="FontAwesome"/>
+                        </Frame>
+
+                        <Label Text="Patient Directory"
+                       Grid.Column="1"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       Margin="15,5,0,0"
+                       FontFamily="FontAwesome"/>
+                        <ImageButton Source="next.png"
+                        Grid.Column="2"
+                        WidthRequest="30"
+                             HeightRequest="30"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        Padding="0,0,0,0"
+                        Margin="0,10,5,0"
+                        BackgroundColor="Transparent"
+                        />
+                    </Grid>
+                    <Grid  ColumnDefinitions=".2*,.6*,.2*"   HeightRequest="70" Margin="0,-10,0,0">
+                        <Frame BackgroundColor="#F7E4DC"
+           BorderColor="#EB3B3A"
+           Padding="15,15,15,15"
+           Margin="20,10,0,0"
+           WidthRequest="50"
+           HeightRequest="50"
+           CornerRadius="30">
+                            <Image Source="checklist.png"
+                           Aspect="Fill"/>
+                        </Frame>
+
+                        <Label Text="My History"
+           Grid.Column="1"
+           HorizontalOptions="Start"
+           VerticalOptions="Center"
+           FontSize="16"
+           FontAttributes="Bold"
+           Margin="15,5,0,0"
+           FontFamily="FontAwesome"/>
+                        <ImageButton Source="next.png"
+            Grid.Column="2"
+            WidthRequest="30"
+                 HeightRequest="30"
+            HorizontalOptions="End"
+            VerticalOptions="Center"
+            Padding="0,0,0,0"
+            Margin="0,10,5,0"
+            BackgroundColor="Transparent"
+            />
+                    </Grid>
+                    <BoxView HeightRequest="1"
+          BackgroundColor="{StaticResource Gray300}"
+                     Margin="10,0,10,0"/>
+                    <Label Text="About App"
+       Grid.Column="1"
+       HorizontalOptions="Start"
+       VerticalOptions="Center"
+       FontSize="20"
+       FontAttributes="Bold"
+       Margin="15,5,0,0"
+       FontFamily="NotoSansBold"/>
+                    <Grid  ColumnDefinitions=".2*,.6*,.2*"   HeightRequest="70" Margin="0,-10,0,0">
+                        <Frame BackgroundColor="#FDECDE"
+BorderColor="#FB950B"
+Padding="10,10,10,10"
+Margin="20,10,0,0"
+WidthRequest="50"
+HeightRequest="50"
+CornerRadius="30">
+                            <Label Text="&#xf02b;"
+       TextColor="#FB950B"
+       FontSize="20"
+       VerticalOptions="Center"
+       HorizontalOptions="Center"
+       FontFamily="FontAwesome"/>
+                        </Frame>
+
+                        <Label Text="Coupen Codes"
+Grid.Column="1"
+HorizontalOptions="Start"
+VerticalOptions="Center"
+FontSize="16"
+FontAttributes="Bold"
+Margin="15,5,0,0"
+FontFamily="FontAwesome"/>
+                        <ImageButton Source="next.png"
+ Grid.Column="2"
+ WidthRequest="30"
+      HeightRequest="30"
+ HorizontalOptions="End"
+ VerticalOptions="Center"
+ Padding="0,0,0,0"
+ Margin="0,10,5,0"
+ BackgroundColor="Transparent"
+ />
+                    </Grid>
+                    <Grid  ColumnDefinitions=".2*,.6*,.2*"   HeightRequest="70" Margin="0,-10,0,0">
+                        <Frame BackgroundColor="#E7EAFD"
+                       BorderColor="#6676F6"
+Padding="15,15,15,15"
+Margin="20,10,0,0"
+WidthRequest="50"
+HeightRequest="50"
+CornerRadius="30">
+                            <Image Source="dragup.png"
+                Aspect="AspectFit"/>
+                        </Frame>
+
+                        <Label Text="About Us"
+Grid.Column="1"
+HorizontalOptions="Start"
+VerticalOptions="Center"
+FontSize="16"
+FontAttributes="Bold"
+Margin="15,5,0,0"
+FontFamily="FontAwesome"/>
+                        <ImageButton Source="next.png"
+ Grid.Column="2"
+ WidthRequest="30"
+      HeightRequest="30"
+ HorizontalOptions="End"
+ VerticalOptions="Center"
+ Padding="0,0,0,0"
+ Margin="0,10,5,0"
+ BackgroundColor="Transparent"
+ />
+                    </Grid>
+                    <Grid  ColumnDefinitions=".2*,.6*,.2*"   HeightRequest="70" Margin="0,-10,0,0">
+                        <Frame BackgroundColor="#E0F2E7"
+BorderColor="#7CB184"
+Padding="0,0,0,0"
+Margin="20,10,0,0"
+WidthRequest="50"
+HeightRequest="50"
+CornerRadius="30">
+                            <Label Text="&#xf005;"
+TextColor="#7CB184"
+FontSize="20"
+VerticalOptions="Center"
+HorizontalOptions="Center"
+FontFamily="FontAwesome"/>
+                        </Frame>
+
+                        <Label Text="Rate Us"
+Grid.Column="1"
+HorizontalOptions="Start"
+VerticalOptions="Center"
+FontSize="16"
+FontAttributes="Bold"
+Margin="15,5,0,0"
+FontFamily="FontAwesome"/>
+                        <ImageButton Source="next.png"
+ Grid.Column="2"
+ WidthRequest="30"
+      HeightRequest="30"
+ HorizontalOptions="End"
+ VerticalOptions="Center"
+ Padding="0,0,0,0"
+ Margin="0,10,5,0"
+ BackgroundColor="Transparent"
+ />
+                    </Grid>
+                    <Grid  ColumnDefinitions=".2*,.6*,.2*"   HeightRequest="70" Margin="0,-10,0,0">
+                        <Frame BackgroundColor="#FCE9E5"
+BorderColor="#EF6969"
+Padding="10,10,10,10"
+Margin="20,10,0,0"
+WidthRequest="50"
+HeightRequest="50"
+CornerRadius="30">
+                            <Label Text="&#xf059;"
+TextColor="#EF6969"
+FontSize="20"
+VerticalOptions="Center"
+HorizontalOptions="Center"
+FontFamily="FontAwesome"/>
+                        </Frame>
+
+                        <Label Text="Help"
+Grid.Column="1"
+HorizontalOptions="Start"
+VerticalOptions="Center"
+FontSize="16"
+FontAttributes="Bold"
+Margin="15,5,0,0"
+FontFamily="FontAwesome"/>
+                        <ImageButton Source="next.png"
+ Grid.Column="2"
+ WidthRequest="30"
+      HeightRequest="30"
+ HorizontalOptions="End"
+ VerticalOptions="Center"
+ Padding="0,0,0,0"
+ Margin="0,10,5,0"
+ BackgroundColor="Transparent"
+ />
+                    </Grid>
+                    <BoxView HeightRequest="1"
+BackgroundColor="{StaticResource Gray300}"
+           Margin="10,10,10,0"/>
+                    <Grid  ColumnDefinitions=".2*,.6*,.2*"   HeightRequest="70" Margin="0,-10,0,0">
+                        <Frame BackgroundColor="#DFF2E7"
+BorderColor="#77BFBC"
+Padding="10,10,10,10"
+Margin="20,10,0,0"
+WidthRequest="50"
+HeightRequest="50"
+CornerRadius="30">
+                            <Label Text="&#xf090;"
+TextColor="#77BFBC"
+FontSize="20"
+VerticalOptions="Center"
+HorizontalOptions="Center"
+FontFamily="FontAwesome"/>
+                        </Frame>
+
+                        <Label Text="Logout"
+Grid.Column="1"
+HorizontalOptions="Start"
+VerticalOptions="Center"
+FontSize="16"
+FontAttributes="Bold"
+Margin="15,5,0,0"
+FontFamily="FontAwesome"/>
+                        <ImageButton Source="next.png"
+ Grid.Column="2"
+ WidthRequest="30"
+      HeightRequest="30"
+ HorizontalOptions="End"
+ VerticalOptions="Center"
+ Padding="0,0,0,0"
+ Margin="0,10,5,0"
+ BackgroundColor="Transparent"
+ />
+                    </Grid>
+                </VerticalStackLayout>
+            </ScrollView>
+
+        <Grid Grid.Row="1" VerticalOptions="End">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".25*" />
+                <ColumnDefinition Width=".25*" />
+                <ColumnDefinition Width=".25*" />
+                <ColumnDefinition Width=".25*" />
+            </Grid.ColumnDefinitions>
+            <ImageButton Source="home.png"
+  WidthRequest="30"
+   Margin="20,10,0,0"
+  HeightRequest="30"
+  VerticalOptions="Center"
+   HorizontalOptions="Center"/>
+            <ImageButton Source="calendar.png"
+          Grid.Column="1"
+          WidthRequest="20"
+          Margin="10,10,0,0"
+          HeightRequest="20"
+          VerticalOptions="Center"
+          HorizontalOptions="Center"/>
+            <ImageButton Source="chat.png"
+          Grid.Column="2"
+          WidthRequest="20"
+          Margin="10,10,0,0"
+          HeightRequest="20"
+          VerticalOptions="Center"
+          HorizontalOptions="Center"/>
+            <Frame BackgroundColor="{StaticResource Gray100}"
+                   WidthRequest="40"
+                   HeightRequest="40"
+                   CornerRadius="30"
+                   Padding="0,0,0,0"
+                   Margin="10,0,0,0"
+                   Grid.Column="3">
+                <Label Text="&#xf007;"
+       TextColor="#6676F6"
+       FontSize="20"
+       
+       VerticalOptions="Center"
+       HorizontalOptions="Center"
+       FontFamily="FontAwesome"/>
+            </Frame>
+            
+        </Grid>
+
+    </Grid>
 </ContentPage>

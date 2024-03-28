@@ -6,6 +6,7 @@ using DoctorConnectMAUI.Screens.DoctorProfile;
 using DoctorConnectMAUI.Screens.Home;
 using DoctorConnectMAUI.Screens.LabAndTestCheckup;
 using DoctorConnectMAUI.Screens.PaymentMethod;
+using DoctorConnectMAUI.Screens.Profile;
 using DoctorConnectMAUI.Screens.Review;
 using DoctorConnectMAUI.Screens.Search;
 using DoctorConnectMAUI.Screens.Specialist;
@@ -19,7 +20,8 @@ namespace DoctorConnectMAUI
 		{
 			InitializeComponent();
 
-			MainPage = new Chat();
+			MainPage = new ProfileScreen();
+			//MainPage = new Chat();
 			//MainPage = new ChatScreen();
 			//MainPage = new NoActiveAppointments();
 			//MainPage = new CancelledAppointments();

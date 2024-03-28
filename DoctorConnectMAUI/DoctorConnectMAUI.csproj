@@ -75,11 +75,13 @@
 	  <None Remove="Resources\Images\chat.png" />
 	  <None Remove="Resources\Images\chatbutton.png" />
 	  <None Remove="Resources\Images\check.png" />
+	  <None Remove="Resources\Images\checklist.png" />
 	  <None Remove="Resources\Images\china.png" />
 	  <None Remove="Resources\Images\clock.png" />
 	  <None Remove="Resources\Images\close.png" />
 	  <None Remove="Resources\Images\contact.png" />
 	  <None Remove="Resources\Images\doublecheck.png" />
+	  <None Remove="Resources\Images\dragup.png" />
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\homebutton.png" />
 	  <None Remove="Resources\Images\leftarrow.png" />
