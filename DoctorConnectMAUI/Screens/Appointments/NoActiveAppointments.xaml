@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DoctorConnectMAUI.Screens.Appointments.NoActiveAppointments"
+             Title="NoActiveAppointments">
+    <Grid  BackgroundColor="{Binding bgColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Text="Appointments"
+            FontSize="16"
+            FontAttributes="Bold"
+            Margin="20,20,0,0"
+            FontFamily="NotoSansBold"/>
+        <Grid Grid.Row="1" ColumnDefinitions="*,*,*" Margin="20,10,0,0">
+            <VerticalStackLayout>
+                <Frame BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    Padding="0,0,0,0">
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Active"
+                             BackgroundColor="Transparent"
+                             TextColor="Black"
+                            FontSize="15"
+                            FontFamily="NotoSansRegular"/>
+                        <Frame Background="#6A79F9"
+                            CornerRadius="10"
+                            WidthRequest="20"
+                            HeightRequest="20"
+                            Margin="-10,0,0,0"
+                            Padding="0,0,0,0">
+                            <Label Text="0"
+                                TextColor="White"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                FontSize="10"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+                <BoxView BackgroundColor="#6A79F9"
+                      HeightRequest="2"
+                      Margin="-20,0,0,0"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1">
+                <Frame BackgroundColor="Transparent"
+        BorderColor="Transparent"
+        Padding="0,0,0,0">
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Past"
+                 BackgroundColor="Transparent"
+                 TextColor="Black"
+                FontSize="15"
+                             Margin="10,0,0,0"
+                FontFamily="NotoSansRegular"/>
+                        <Frame Background="#6A79F9"
+                CornerRadius="10"
+                WidthRequest="20"
+                HeightRequest="20"
+                Margin="-10,0,0,0"
+                Padding="0,0,0,0">
+                            <Label Text="4"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="10"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+                <BoxView BackgroundColor="{StaticResource Gray300}"
+          HeightRequest="1"
+          Margin="-20,0,0,0"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="2">
+                <Frame BackgroundColor="Transparent"
+        BorderColor="Transparent"
+        Padding="0,0,0,0">
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Cancelled"
+                 BackgroundColor="Transparent"
+                 TextColor="Black"
+                FontSize="15"
+                FontFamily="NotoSansRegular"/>
+                        <Frame Background="#6A79F9"
+                CornerRadius="10"
+                WidthRequest="20"
+                HeightRequest="20"
+                Margin="-10,0,0,0"
+                Padding="0,0,0,0">
+                            <Label Text="2"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="10"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+                <BoxView BackgroundColor="{StaticResource Gray300}"
+          HeightRequest="1"
+          Margin="-20,0,0,0"/>
+            </VerticalStackLayout>
+        </Grid>
+        <VerticalStackLayout Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="calendar.png"
+                   WidthRequest="30"
+                   HeightRequest="30"/>
+            <Label Text="No Active Appointments"
+                   TextColor="{StaticResource Gray400}"/>
+        </VerticalStackLayout>
+        <Frame Grid.Row="3" 
+            VerticalOptions="End"
+            Padding="0,0,0,0"
+            BorderColor="Transparent"
+            CornerRadius="0"
+            Margin="0,0,0,-5"
+            HeightRequest="50">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".25*" />
+                    <ColumnDefinition Width=".25*" />
+                    <ColumnDefinition Width=".25*" />
+                    <ColumnDefinition Width=".25*" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="home.png"
+                  WidthRequest="30"
+                   Margin="20,10,0,0"
+                  HeightRequest="30"
+                  VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+                <ImageButton Source="calendarbutton.png"
+                          Grid.Column="1"
+                          WidthRequest="20"
+                          Margin="10,10,0,0"
+                          HeightRequest="20"
+                          VerticalOptions="Center"
+                          HorizontalOptions="Center"/>
+                <ImageButton Source="chat.png"
+                          Grid.Column="2"
+                          WidthRequest="20"
+                          Margin="10,10,0,0"
+                          HeightRequest="20"
+                          VerticalOptions="Center"
+                          HorizontalOptions="Center"/>
+                <ImageButton Source="contact.png"
+                          Grid.Column="3"
+                          WidthRequest="20"
+                          Margin="10,10,0,0"
+                          HeightRequest="20"
+                          VerticalOptions="Center"
+                          HorizontalOptions="Center"/>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

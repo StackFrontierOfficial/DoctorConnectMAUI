@@ -71,11 +71,15 @@
 	  <None Remove="Resources\Images\arrowup.png" />
 	  <None Remove="Resources\Images\back.png" />
 	  <None Remove="Resources\Images\calendar.png" />
+	  <None Remove="Resources\Images\calendarbutton.png" />
 	  <None Remove="Resources\Images\chat.png" />
+	  <None Remove="Resources\Images\chatbutton.png" />
 	  <None Remove="Resources\Images\check.png" />
 	  <None Remove="Resources\Images\china.png" />
 	  <None Remove="Resources\Images\clock.png" />
+	  <None Remove="Resources\Images\close.png" />
 	  <None Remove="Resources\Images\contact.png" />
+	  <None Remove="Resources\Images\doublecheck.png" />
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\homebutton.png" />
 	  <None Remove="Resources\Images\leftarrow.png" />
@@ -85,6 +89,7 @@
 	  <None Remove="Resources\Images\morning.png" />
 	  <None Remove="Resources\Images\next.png" />
 	  <None Remove="Resources\Images\notification.png" />
+	  <None Remove="Resources\Images\send.png" />
 	  <None Remove="Resources\Images\star.png" />
 	  <None Remove="Resources\Images\tick.png" />
 	  <None Remove="Resources\Images\unitedstates.png" />
@@ -98,6 +103,18 @@
 	<ItemGroup>
 		<MauiXaml Update="Screens\AboutUs\AboutUsScreen.xaml">
 			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Appointments\AppointmentScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Appointments\AppointmentStatus.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Appointments\CancelledAppointments.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Appointments\NoActiveAppointments.xaml">
+		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Screens\Auth\CountryCode.xaml">
 		  <Generator>MSBuild:Compile</Generator>
@@ -113,6 +130,9 @@
 		</MauiXaml>
 		<MauiXaml Update="Screens\Auth\WelcomeScreen.xaml">
 			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Chat\Chat.xaml">
+		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Screens\Chat\ChatScreen.xaml">
 		  <Generator>MSBuild:Compile</Generator>

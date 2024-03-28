@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DoctorConnectMAUI.Screens.Chat.Chat"
+             Title="Chat">
+    
+    <Grid  BackgroundColor="{Binding bgColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <VerticalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="70" VerticalOptions="Center" HeightRequest="50"
+     HorizontalOptions="Start">
+                <Image Source="arrow.png"
+    WidthRequest="20"
+    Margin="20,10,0,0"
+    HeightRequest="20"/>
+                <Label Text="Dr Brayden Trump"
+    FontSize="16"
+    FontAttributes="Bold"
+    Margin="0,15,0,0"
+    FontFamily="NotoSansBold"/>
+            </HorizontalStackLayout>
+            <BoxView HeightRequest="1"
+                  BackgroundColor="{StaticResource Gray200}"/>
+        </VerticalStackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical">
+                <VerticalStackLayout Margin="0,20,0,0">
+                    <Frame  BackgroundColor="Transparent" WidthRequest="120"
+           HeightRequest="50"
+            Padding="0,0,0,0"
+            BorderColor="Transparent"
+            Margin="0,0,10,0"
+           HorizontalOptions="End">
+                        <StackLayout>
+                            <RoundRectangle BackgroundColor="#6A79f9"  HeightRequest="50" WidthRequest="120" CornerRadius="10,10,10,0" />
+                            <Label Text="Hello Doctor"
+                   TextColor="White"  HorizontalOptions="CenterAndExpand" Margin="-35" />
+                        </StackLayout>
+
+                    </Frame>
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="End" Margin="0,0,20,0">
+                        <Image Source="doublecheck.png"
+               WidthRequest="20"
+               HeightRequest="20"/>
+                        <Label Text="9:35 AM"
+               TextColor="{StaticResource Gray300}"
+               Margin="0,2,0,0"
+               HorizontalOptions="End"
+               FontSize="12"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="0,20,0,0" HorizontalOptions="Start" >
+                    <Frame  BackgroundColor="Transparent" WidthRequest="120"
+                            HeightRequest="50"
+                             Padding="0,0,0,0"
+                             BorderColor="Transparent"
+                             Margin="0,0,10,0"
+                            HorizontalOptions="End">
+                        <StackLayout>
+                            <RoundRectangle BackgroundColor="{StaticResource Gray300}"  HeightRequest="50" WidthRequest="80" CornerRadius="10,10,0,10" />
+                            <Label Text="Hello "
+        TextColor="White"  HorizontalOptions="CenterAndExpand" Margin="-35" />
+                        </StackLayout>
+
+                    </Frame>
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Start" Margin="0,0,0,0">
+                        
+                        <Label Text="9:36 AM"
+                               TextColor="{StaticResource Gray300}"
+                               Margin="40,2,0,0"
+                               HorizontalOptions="Start"
+                               FontSize="12"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="20,0,0,0" HorizontalOptions="Start" >
+                    <Frame  BackgroundColor="{StaticResource Gray300}" WidthRequest="150"
+                    HeightRequest="50"
+                     Padding="0,0,0,0"
+                     BorderColor="Transparent"
+                     Margin="0,0,10,0"
+                    HorizontalOptions="End">
+                        <Label Text="How can i help you? "
+                               TextColor="White"
+                               VerticalOptions="Center"
+                               HorizontalOptions="CenterAndExpand"/>
+
+                    </Frame>
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Start" Margin="0,0,0,0">
+
+                        <Label Text="9:37 AM"
+                       TextColor="{StaticResource Gray300}"
+                       Margin="20,2,0,0"
+                       HorizontalOptions="Start"
+                       FontSize="12"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="0,20,0,0">
+                    <Frame  BackgroundColor="#6A79F9" 
+                            HeightRequest="50"
+                             Padding="10,0,10,0"
+                             BorderColor="Transparent"
+                             Margin="0,0,10,0"
+                            HorizontalOptions="End">
+                        <Label Text="I am feeling sick for 2 days"
+        TextColor="White"
+        VerticalOptions="Center"
+        HorizontalOptions="CenterAndExpand"/>
+
+                    </Frame>
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="End" Margin="0,0,20,0">
+                        <Image Source="doublecheck.png"
+                               WidthRequest="20"
+                               HeightRequest="20"/>
+                        <Label Text="9:38 AM"
+                              TextColor="{StaticResource Gray300}"
+                              Margin="0,2,0,0"
+                              HorizontalOptions="End"
+                              FontSize="12"/> 
+                    </StackLayout>
+                </VerticalStackLayout>
+            </StackLayout>
+        </ScrollView>
+        <Grid Grid.Row="1" VerticalOptions="End" ColumnDefinitions=".8*,.2*">
+            
+            <Frame BackgroundColor="#6A79F9"
+                   Margin="10,0,0,0"
+                   Padding="10,0,0,0"
+                   HeightRequest="50">
+                <Entry Placeholder="Type a message"
+                       PlaceholderColor="White"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"/>
+            </Frame>
+            <Frame BackgroundColor="{StaticResource Gray200}"
+                   CornerRadius="30"
+                   WidthRequest="50"
+                   Padding="10,10,10,10"
+                   Grid.Column="1"
+                   HeightRequest="50">
+                <ImageButton Source="send.png"
+                             Margin="5,0,0,0"
+                             Aspect="AspectFit"/>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>
