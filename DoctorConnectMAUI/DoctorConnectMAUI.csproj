@@ -92,6 +92,7 @@
 	  <None Remove="Resources\Images\next.png" />
 	  <None Remove="Resources\Images\notification.png" />
 	  <None Remove="Resources\Images\send.png" />
+	  <None Remove="Resources\Images\silent.png" />
 	  <None Remove="Resources\Images\smartphone.png" />
 	  <None Remove="Resources\Images\star.png" />
 	  <None Remove="Resources\Images\tick.png" />
@@ -173,7 +174,16 @@
 		<MauiXaml Update="Screens\LabAndTestCheckup\LabTestAndHealthCheckUpScreen.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="Screens\Logout\LogoutScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Screens\Message\MessageScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Notifications\NotificationDelete.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\Notifications\NotificationEmpty.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Screens\Notifications\NotificationScreen.xaml">

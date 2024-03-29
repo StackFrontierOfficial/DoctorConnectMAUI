@@ -1,4 +1,5 @@
-﻿using DoctorConnectMAUI.Screens.Appointments;
+﻿using DoctorConnectMAUI.Screens.AboutUs;
+using DoctorConnectMAUI.Screens.Appointments;
 using DoctorConnectMAUI.Screens.Auth;
 using DoctorConnectMAUI.Screens.Chat;
 using DoctorConnectMAUI.Screens.ConsultationDetail;
@@ -6,6 +7,9 @@ using DoctorConnectMAUI.Screens.DoctorProfile;
 using DoctorConnectMAUI.Screens.EditProfile;
 using DoctorConnectMAUI.Screens.Home;
 using DoctorConnectMAUI.Screens.LabAndTestCheckup;
+using DoctorConnectMAUI.Screens.Logout;
+using DoctorConnectMAUI.Screens.Notifications;
+using DoctorConnectMAUI.Screens.PatientDirectory;
 using DoctorConnectMAUI.Screens.PaymentMethod;
 using DoctorConnectMAUI.Screens.Profile;
 using DoctorConnectMAUI.Screens.Review;
@@ -21,7 +25,13 @@ namespace DoctorConnectMAUI
 		{
 			InitializeComponent();
 
-			MainPage = new ChangePhoneNumber();
+			MainPage = new LogoutScreen();
+			//MainPage = new NotificationEmpty();
+			//MainPage = new NotificationDelete();
+			//MainPage = new NotificationScreen();
+			//MainPage = new AboutUsScreen();
+			//MainPage = new PatientDirectoryScreen();
+			//MainPage = new ChangePhoneNumber();
 			//MainPage = new ChangeEmail();
 			//MainPage = new ChangePassword();
 			//MainPage = new ChaneName();

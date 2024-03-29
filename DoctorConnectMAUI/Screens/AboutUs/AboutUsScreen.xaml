@@ -3,10 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DoctorConnectMAUI.Screens.AboutUs.AboutUsScreen"
              Title="AboutUsScreen">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <VerticalStackLayout>
+            <HorizontalStackLayout Spacing="20"
+                                   VerticalOptions="Center" 
+                                   HeightRequest="50"
+                                   HorizontalOptions="Start">
+                <Image Source="arrow.png"
+                       WidthRequest="20"
+                       Margin="20,10,0,0"
+                       HeightRequest="20"/>
+                <Label Text="About Us"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       Margin="0,15,0,0"
+                       FontFamily="NotoSansBold"/>
+            </HorizontalStackLayout>
+            <BoxView BackgroundColor="{StaticResource Gray300}"
+             HeightRequest="1"/>
+        </VerticalStackLayout>
+        <ScrollView Grid.Row="1" Margin="20,20,10,0">
+            <VerticalStackLayout Spacing="20">
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                       TextColor="Black"
+                       FontAttributes="Bold"/>
+                <Label Text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.  "
+                       TextColor="Black"
+                       FontAttributes="Bold"/>
+                <Label Text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock"
+                       TextColor="Black"
+                       FontAttributes="Bold"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>

@@ -3,10 +3,75 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DoctorConnectMAUI.Screens.PatientDirectory.PatientDirectoryScreen"
              Title="PatientDirectoryScreen">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <VerticalStackLayout>
+            <HorizontalStackLayout Spacing="20" VerticalOptions="Center" HeightRequest="50"
+        HorizontalOptions="Start">
+                <Image Source="arrow.png"
+          WidthRequest="20"
+          Margin="20,10,0,0"
+          HeightRequest="20"/>
+                <Label Text="Patient Directory"
+          FontSize="16"
+          FontAttributes="Bold"
+          Margin="0,15,0,0"
+          FontFamily="NotoSansBold"/>
+            </HorizontalStackLayout>
+            <BoxView BackgroundColor="{StaticResource Gray300}"
+                 HeightRequest="1"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="1">
+            <ListView ItemsSource="{Binding users}"  HasUnevenRows="True" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10,10,0,10" ColumnDefinitions=".3*,.7*">
+                                <Frame BackgroundColor="#F6F6F5"
+                    WidthRequest="60"
+                    HeightRequest="60"
+                    CornerRadius="40">
+                                    <Image Source="{Binding UserImage}"
+                        WidthRequest="60"
+                        HeightRequest="60"
+                        Aspect="Fill"/>
+                                </Frame>
+                                <Label Text="{Binding Name}"
+                    TextColor="Black"
+                    FontSize="14"
+                    Margin="0,20,0,0"
+                    Grid.Column="1"
+                    FontAttributes="Bold"
+                    FontFamily="NotoSansBold"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </VerticalStackLayout>
+        <Frame BackgroundColor="#1E97F3"
+               BorderColor="Transparent"
+               HorizontalOptions="End"
+               VerticalOptions="End"
+               WidthRequest="50"
+               HeightRequest="50"
+               Margin="0,0,10,10"
+               CornerRadius="30"
+               Grid.Row="1"
+               Padding="0,0,0,0">
+                <Button  HeightRequest="50"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Margin="30,0,30,10"
+                         FontSize="30"
+                         WidthRequest="200"
+                         FontFamily="FontAwesome"
+                         BackgroundColor="Transparent"
+                         Text="&#x2b;"/>
+        </Frame>
+    </Grid>
 </ContentPage>

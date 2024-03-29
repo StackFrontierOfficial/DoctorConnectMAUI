@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DoctorConnectMAUI.Screens.Notifications.NotificationEmpty"
+             Title="NotificationEmpty">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <VerticalStackLayout>
+            <HorizontalStackLayout Spacing="20"
+                       VerticalOptions="Center" 
+                       HeightRequest="50"
+                       HorizontalOptions="Start">
+                <Image Source="arrow.png"
+               WidthRequest="20"
+               Margin="20,10,0,0"
+               HeightRequest="20"/>
+                <Label Text="Notifications"
+           FontSize="16"
+           FontAttributes="Bold"
+           Margin="0,15,0,0"
+           FontFamily="NotoSansBold"/>
+            </HorizontalStackLayout>
+            <BoxView BackgroundColor="{StaticResource Gray300}"
+             HeightRequest="1"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="1" 
+                             VerticalOptions="Center" 
+                             HorizontalOptions="Center">
+            <Image Source="silent.png"
+                   WidthRequest="30"
+                   HeightRequest="30"/>
+            <Label Text="No Notifications"
+                   TextColor="{StaticResource Gray300}"
+                   Margin="0,10,0,0"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
