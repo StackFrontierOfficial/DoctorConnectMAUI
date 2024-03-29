@@ -92,6 +92,7 @@
 	  <None Remove="Resources\Images\next.png" />
 	  <None Remove="Resources\Images\notification.png" />
 	  <None Remove="Resources\Images\send.png" />
+	  <None Remove="Resources\Images\smartphone.png" />
 	  <None Remove="Resources\Images\star.png" />
 	  <None Remove="Resources\Images\tick.png" />
 	  <None Remove="Resources\Images\unitedstates.png" />
@@ -143,6 +144,21 @@
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Screens\DoctorProfile\DoctorProfileScreen.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\EditProfile\ChaneName.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\EditProfile\ChangeEmail.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\EditProfile\ChangePassword.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\EditProfile\ChangePhoneNumber.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Screens\EditProfile\ChangeProfilePicture.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Screens\EditProfile\EditProfileScreen.xaml">
